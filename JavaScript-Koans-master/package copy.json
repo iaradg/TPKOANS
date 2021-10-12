@@ -1,0 +1,28 @@
+{
+  "main": "topics/about_asserts.js",
+  "name": "javascript-koans",
+  "description": "Update ======",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node ./topics/about_arrays.js && node ./topics/about_asserts.js && node ./topics/about_assignment.js && node ./topics/about_control_structures.js && node ./topics/about_equality.js && node ./topics/about_functions_and_closure.js && node ./topics/about_numbers.js && node ./topics/about_objects.js && node ./topics/about_operators.js && node ./topics/about_prototypal_inheritance.js &&node ./topics/about_prototype_chain.js && node ./topics/about_reflections.js && node ./topics/about_scope.js && node ./topics/about_strings.js && node ./topics/about_this.js && node ./topics/about_truthyness.js",
+		"start": "node ./",
+		"koans": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipetus/JavaScript-Koans.git"
+  },
+  "keywords": [
+    "javascript",
+    "koans"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pipetus/JavaScript-Koans/issues"
+  },
+  "homepage": "https://github.com/pipetus/JavaScript-Koans#readme"
+
+
+}
+
