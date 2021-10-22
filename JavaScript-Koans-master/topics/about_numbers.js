@@ -10,6 +10,7 @@ test("types", () => {
     equal(1, 1.0, 'what is a integer number equivalent to 1.0?');
 });
 
+
 test("NaN", () => {
     const resultOfFailedOperations = 7/'apple';
     equal(true, Number.isNaN(resultOfFailedOperations), 'what will satisfy the equals assertion?');
