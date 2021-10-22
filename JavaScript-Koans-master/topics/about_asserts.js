@@ -1,5 +1,5 @@
 // module("About Asserts (topics/about_asserts.js)");
-const { ok, equal } = require('assert')
+const  assert = require('assert')
 // const { __, test } = require('../support/koans')
 const koans = require('../support/koans')
 // const __ = koans.__

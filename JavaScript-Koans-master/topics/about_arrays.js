@@ -15,16 +15,17 @@ test("array type", () => {
 
 test("length", () => {
     const collection = ['a','b','c'];
-    equal(2, collection.length, 'what is the length of the collection array?');
+    equal(3, collection.length, 'what is the length of the collection array?');
 });
 
 test("splice", () => {
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    const workingWeek = daysOfWeek.splice(5, 0,'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday');
+    const workingWeek = daysOfWeek.splice(0, 5);
     const weekend = daysOfWeek;
 
     deepEqual(workingWeek, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'what is the value of workingWeek?');
     deepEqual(weekend, ['Saturday', 'Sunday'], 'what is the value of weekend?');
+
 });
 
 test("stack methods", () => {
@@ -32,8 +33,8 @@ test("stack methods", () => {
     stack.push("first");
     stack.push("second");
 
-    equal("first", stack.pop(), 'what will be the first value popped off the stack?');
-    equal("second", stack.pop(), 'what will be the second value popped off the stack?');
+    equal("second", stack.pop(), 'what will be the first value popped off the stack?');
+    equal("first", stack.pop(), 'what will be the second value popped off the stack?');
 });
 
 test("queue methods", () => {

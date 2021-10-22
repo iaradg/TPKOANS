@@ -15,7 +15,7 @@ test("for", () => {
 	for (let i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equal(13, counter, 'what is the value of counter?');
+	equal(16, counter, 'what is the value of counter?');
 });
 
 test("for in", () => {
@@ -30,7 +30,7 @@ test("for in", () => {
 	for (let property_name in person) {
   		result = result + property_name;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal(`nameage`, result, 'what is the value of result?');
 });
 
 test("ternary operator", () => {
@@ -38,7 +38,7 @@ test("ternary operator", () => {
 	equal("apple", fruit, 'what is the value of fruit?');
 
 	fruit = false ? "apple" : "orange";
-	equal("orange ", fruit, 'now what is the value of fruit?');
+	equal("orange", fruit, 'now what is the value of fruit?');
 });
 
 test("switch", () => {
@@ -67,7 +67,7 @@ test("switch default case", () => {
             result = "Merry";
             break;
     }
-    equal("merry", result, 'what is the value of result?');
+    equal("Merry", result, 'what is the value of result?');
 });
 
 test("null coalescing", () => {

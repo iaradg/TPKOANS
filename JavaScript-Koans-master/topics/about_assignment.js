@@ -4,7 +4,7 @@ const { __, test } = require('../support/koans')
 
 test("local variables", () => {
     const temp = 9;
-    equal(temp, 1, "Assign a value to the variable temp");
+    equal(temp, 9, "Assign a value to the variable temp");
 });
 
 test("global variables", () => {

@@ -6,10 +6,10 @@ test("defining functions directly", () => {
     const result = "a";
     function changeResult() {
         // the ability to access a variables defined in the same scope as the function is known as 'closure'
-        result = "b";
+        this.result = "b";
     };
     changeResult();
-    equal("b", result, 'what is the value of result?');
+    equal("a", result, 'what is the value of result?');
 });
 
 test("assigning functions to variables", () => {
@@ -26,12 +26,12 @@ test("self invoking functions", () => {
     (function(pv) {
         const secretValue = "password";
         equal("shared", pv, 'what is the value of pv?');
-        equal("yes", typeof(secretValue), "is secretValue available in this context?");
-        equal("yes", typeof(publicValue), "is publicValue available in this context?");
+        equal("string", typeof(secretValue), "is secretValue available in this context?");
+        equal("string", typeof(publicValue), "is publicValue available in this context?");
     })(publicValue);
 
-    equal("no", typeof(secretValue), "is secretValue available in this context?");
-    equal("yes", typeof(publicValue), "is publicValue available in this context?");
+    equal("undefined", typeof(secretValue), "is secretValue available in this context?");
+    equal("string", typeof(publicValue), "is publicValue available in this context?");
 });
 
 test("arguments array", () => {
@@ -40,8 +40,9 @@ test("arguments array", () => {
         for(let i = 0; i < arguments.length; i++) {
             // complete the implementation of this method so that it returns the sum of its arguments
             console.log(arguments[i]);
+            total=total+ arguments[i];
         }
-        // __
+        return total;
     };
 
     equal(15, add(1,2,3,4,5), "add 1,2,3,4,5");
@@ -59,7 +60,7 @@ test("using call to invoke function", () => {
     //function, and the arguments to be sent to the function,multiple arguments are separated by commas.
     const result = invokee.call("I am this!", "Where did it come from?");
         
-    equal("I am this!", result, "what will the value of invokee's this be?");
+    equal('I am this!Where did it come from?', result, "what will the value of invokee's this be?");
 });
 
 test("using apply to invoke function", () => {
@@ -72,6 +73,6 @@ test("using apply to invoke function", () => {
     //function and the second is the array of arguments to be passed into the called function.
     const result = invokee.apply("I am this!", ["I am arg1", "I am arg2"]);
         
-    equal("I am arg1", "I am arg2", result, "what will the value of invokee's this be?");
+    equal("I am this!I am arg1I am arg2", result, "what will the value of invokee's this be?");
 });
 
